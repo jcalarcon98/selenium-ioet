@@ -5,6 +5,7 @@ from selenium import webdriver
 
 
 class BaseTestCase(TestCase):
+
     def setUp(self) -> None:
         chrome_driver = webdriver.Chrome(ChromeDriverManager().install())
         self.web_driver = chrome_driver

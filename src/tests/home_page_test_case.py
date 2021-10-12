@@ -8,3 +8,9 @@ class HomePageTestCase(BaseTestCase):
         home_page_pom = HomePage(self.web_driver)
         home_page_title = home_page_pom.get_title()
         self.assertIsNotNone(home_page_title)
+
+    def test_links_functionality(self):
+        home_page_pom = HomePage(self.web_driver)
+        home_page_pom.click_skill_link()
+        current_page_url = home_page_pom.driver.get_current_page_url()
+        self.assertEqual(current_page_url, 'https://www.ioet.com/technologiess')

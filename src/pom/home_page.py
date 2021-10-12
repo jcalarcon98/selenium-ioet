@@ -15,3 +15,6 @@ class HomePage:
     def get_title(self) -> Optional[str]:
         title = self.driver.get_element_text(self.TITLE)
         return title
+
+    def click_skill_link(self):
+        self.driver.click(self.SKILL_AND_TECHNOLOGIES_LINK)

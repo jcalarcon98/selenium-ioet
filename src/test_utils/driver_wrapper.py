@@ -50,3 +50,6 @@ class DriverWrapper:
     def click(self, locator):
         self.driver.find_element(*locator).click()
 
+    def get_current_page_url(self):
+        return self.driver.current_url
+
